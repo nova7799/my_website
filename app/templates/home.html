@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text">
+    <h2>Welcome to Curtains For You</h2>
+    <p>Your one-stop solution for mosquito doors and windows!</p>
+    <a href="#about" class="scroll-down">▼</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <h3>Why Choose Us?</h3>
+  <p>We offer high-quality, stylish, and durable mosquito door and window solutions, tailored to your needs with professional installation.</p>
+</section>
+
+<!-- Services Highlights -->
+
+<section class="services-section">
+  <h3>Our Core Services</h3>
+  <div class="service-cards">
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/h1.png') }}" alt="Magnetic Mosquito Doors">
+      <h4>Magnetic Mosquito Doors</h4>
+      <p>Easy-to-use and aesthetic mosquito door systems for all door types.</p>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/h2.png') }}" alt="Sliding Mosquito Windows">
+      <h4>Sliding Mosquito Windows</h4>
+      <p>Custom-fit solutions for all window sizes with smooth sliding mechanisms.</p>
+    </div>
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/hi12.png') }}" alt="Installation & Support">
+      <h4>Free Installation & Support</h4>
+      <p>Professional installation and free after-sale service.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <h3>Our Satisfied customer Say's </h3>
+  <div class="testimonial">
+    <p>“Great service! The mosquito doors are effective and look great in our home.”</p>
+    <strong>- Priya S., Coimbatore</strong>
+  </div>
+  <div class="testimonial">
+    <p>“Professional team with high-quality products. Highly recommended!”</p>
+    <strong>- Karthik M., Erode</strong>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta-section">
+  <h3>Ready to protect your home?</h3>
+  <p>Contact us for a free consultation and quote.</p>
+  <a href="/contact" class="cta-btn">Get in Touch</a>
+  <a href="/whatsapp" class="cta-btn green">Chat on WhatsApp</a>
+</section>
+
+<section class="hero">
+    <h1> Curtains For You</h1>
+</section>
+<!-- templates/home.html -->
+{% endblock %}
