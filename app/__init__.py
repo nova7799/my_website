@@ -3,7 +3,8 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 
-load_dotenv(Path(__file__).parent.parent / 'project.env')
+load_dotenv()  
+
 
 def create_app():
     app = Flask(__name__)

@@ -35,7 +35,7 @@ def whatsapp():
     return render_template('whatsapp.html')
 
 @routes.route('/help')
-def help_page():
+def help():
     return render_template('help.html')
 
 @routes.route('/ask_question', methods=['POST'])

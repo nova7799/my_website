@@ -5,7 +5,7 @@
     <h2>Need Help? Ask a Question</h2>
     <p class="help-intro">Have a specific query? Submit your question and our team will reach out to you shortly.</p>
 
-    <form method="POST" action="{{ url_for('ask_question') }}" class="help-form">
+    <form method="POST" action="{{ url_for('routes.ask_question') }}" class="help-form">
         <div class="form-group">
             <label for="name">Your Name</label>
             <input type="text" name="name" placeholder="Enter your name" required>
