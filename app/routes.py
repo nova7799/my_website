@@ -2,15 +2,13 @@ from flask import render_template, request, redirect, flash
 import smtplib
 import os
 from email.message import EmailMessage
-<<<<<<< HEAD
-=======
 from app.models import Message  # Your Message model
 from app import db              # The SQLAlchemy object
 
 from dotenv import load_dotenv
 load_dotenv()
 
->>>>>>> 9a5e7ae3bf8d5382f1a7c4ff1d5c230cbb09ec86
+
 
 def register_routes(app):
     @app.route('/')
@@ -44,14 +42,13 @@ def register_routes(app):
         question = request.form.get("question")
 
         try:
-<<<<<<< HEAD
-=======
+
             # Save message to database
             new_msg = Message(name=name, email=email, question=question)
             db.session.add(new_msg)
             db.session.commit()
 
->>>>>>> 9a5e7ae3bf8d5382f1a7c4ff1d5c230cbb09ec86
+
             # Explicitly get env variables
             email_user = os.environ.get("EMAIL_USER")
             email_pass = os.environ.get("EMAIL_PASS")
@@ -68,11 +65,7 @@ def register_routes(app):
                 "Regards,\nCurtains For You Website Bot"
             )
 
-<<<<<<< HEAD
-            # HTML version (better formatting for most email clients)
-=======
-            # HTML version
->>>>>>> 9a5e7ae3bf8d5382f1a7c4ff1d5c230cbb09ec86
+
             msg.add_alternative(f"""
             <html>
             <body>
@@ -88,20 +81,19 @@ def register_routes(app):
             </html>
             """, subtype='html')
 
-<<<<<<< HEAD
-            # Email headers
+         
             msg["Subject"] = f"Website Question from {name}"
             msg["From"] = email_user
             msg["To"] = "velfanova143@gmail.com"  # Replace with your email address
 
 
-            # Try both common SMTP configurations
-=======
+            
+
             msg["Subject"] = f"Website Question from {name}"
             msg["From"] = email_user
             msg["To"] = "velfanova143@gmail.com"
 
->>>>>>> 9a5e7ae3bf8d5382f1a7c4ff1d5c230cbb09ec86
+
             try:
                 with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=10) as smtp:
                     smtp.login(email_user, email_pass)
@@ -121,7 +113,4 @@ def register_routes(app):
         return redirect("/help")
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 9a5e7ae3bf8d5382f1a7c4ff1d5c230cbb09ec86
